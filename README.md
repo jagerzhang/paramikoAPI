@@ -2,7 +2,6 @@
 remote command and file transfer API Base on paramiko and sftp
 
 简单说下用法：
-Python
 
 先在Python脚本中载入，需要提前安装paramiko和pysftp插件（推荐pip命令安装）
 from xxxx import remoteCtrl
@@ -44,7 +43,6 @@ ret 表示传输结果，ret_info 是返回信息
 
 ③、文件传输demo：
 将本地的/data/src.tar.gz推送到192.168.0.10服务器的/data/files/dst.tar.gz
-Python
 
 myHandler = remoteCtrl()
 ret, ret_info = myHandler.transfer('192.168.0.10','123456','/data/src.tar.gz','/data/files/dst.tar.gz', 'push' )
