@@ -1,13 +1,17 @@
 # paramikoAPI
 remote command and file transfer API Base on paramiko and sftp
 
+详细介绍： https://zhangge.net/5121.html
+
 简单说下用法：
 
 先在Python脚本中载入，需要提前安装paramiko和pysftp插件（推荐pip命令安装）
 from xxxx import remoteCtrl
 
 执行远程命令，需要传入远程服务器ip地址、密码、命令、远程ssh端口，用户名和超时时间
+
 myHandler = remoteCtrl()
+
 ret, ret_info = myHandler.command(ip, password, cmd, port, user, timeout )
 
 ret 表示最后一个命令的退出状态，ret_info 则是远程命令的打屏信息（含报错）
