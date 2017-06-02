@@ -52,7 +52,7 @@ class paramikoAPI(object):
         for line in  stderr.readlines():
             result_info += line
         
-        return 0,  result_info
+        return stderr.channel.recv_exit_status(),  result_info
 
     # Description : paramiko & pysftp & sftp transfer.
     def transfer(self,ip, passwd, src, dst, action='push', user = 'root' , port = 36000, timeout=60):
